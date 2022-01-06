@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const commentSchema = new Schema({
   PostId: [{ type: Schema.Types.ObjectId, ref: "Post" }],
-  resposta: { type: String },
+  reply: [{ type: String }],
   like: { type: Number },
   commentTime: { type: Date },
 });
